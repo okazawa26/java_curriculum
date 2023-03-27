@@ -27,5 +27,5 @@ public class sample {
 		default:
 			System.out.println(date + "月は31日です。");
 		}
-	}    
+	}   
 }
