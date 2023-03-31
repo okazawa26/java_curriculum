@@ -14,7 +14,6 @@ public class Variable1 {
 //		年齢は19歳です。
 //		身長は174.2㎝です。
 //		よろしくお願いします。
-		
 		String name = "岡澤亮太";
 		
 		String gender = "男";
