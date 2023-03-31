@@ -32,7 +32,6 @@ public class practice4 {
 			}
 			System.out.println(str[i]);
 		}
-		System.out.println(" ");
 
 //		cotinue文を使用し、i以外を表示してください。
 		for(int i = 0; i < str.length; i++) {
