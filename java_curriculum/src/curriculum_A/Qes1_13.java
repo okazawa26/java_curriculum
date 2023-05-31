@@ -256,7 +256,7 @@ public class Qes1_13 {
 
 		//		Q13 12で変換した【年齢・身長】で【年齢が25もしくは身長が160以上】であればtrueを出力してください
 		//		ただしif文は使わないでください
-		// 論理演算子||を使ってageInt(年齢)が25もしくはheightInt(身長)が160以上の場合trueを出力
+		//  論理演算子||を使ってageInt(年齢)が25もしくはheightInt(身長)が160以上の場合trueを出力
 		System.out.println(ageInt >= 25 || heightInt >= 160);
 
 
