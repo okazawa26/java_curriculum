@@ -12,21 +12,14 @@ public class Qes5 {
 				// iとjの掛け算の結果を変数に代入
 
 				int result = i * j;
+				
 
 				// 結果が3桁以上ならそのまま出力し、1桁しかない場合は0をつけて3桁で出力
-				System.out.printf("%03d * %03d = %03d", j , i , result);
-
-
-				// 内側のループ が20以外の時、 || を出力
-				if (j != 20) {
-
-					System.out.print(" || ");
-
-				}
+				 // 内側のループの整数が20以外の時 || を出力し、整数が20であれば改行する
+				System.out.printf("%03d * %03d = %03d%s", j , i , result, (j != 20 ? " || " : "\n"));
+				
+				
 			}
-
-			// ループの最後に改行
-			System.out.println();
 		}
 	}
 }
