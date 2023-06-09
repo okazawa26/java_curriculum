@@ -22,7 +22,7 @@ public class Qes5 {
 					// 三桁で出力
 					System.out.printf("%03d * %03d = %03d  ||  ", j, i, result);
 
-					//  内側のループが20のとき改行
+					// 内側のループが20のとき改行
 				} else {
 
 					// 三桁で出力
