@@ -69,7 +69,7 @@ public class Qes6 {
 				int randomProducts = rand.nextInt(12);
 
 				// 残り台数のメッセージを出力
-				System.out.println(product + "の残り台数は" + randomProducts + "台です");
+				System.out.println(product + "の残り台数は" + randomProducts + "台です\n");
 
 				// ケースの実行を終了
 				break;
@@ -83,7 +83,7 @@ public class Qes6 {
 				int productCount = (product.equals("ディスプレイ")) ? (11 - tvAndDisplayCount) : tvAndDisplayCount;
 
 				// 残り台数のメッセージを出力
-				System.out.println(product + "の残り台数は" + productCount + "台です");
+				System.out.println(product + "の残り台数は" + productCount + "台です\n");
 
 				// ケースの実行を終了
 				break;
@@ -92,7 +92,7 @@ public class Qes6 {
 			default:
 
 				// 指定された商品が存在しない場合のメッセージを出力
-				System.out.println("『" + product + "』は指定の商品ではありません");
+				System.out.println("『" + product + "』は指定の商品ではありません\n");
 			}
 		}
 	}
