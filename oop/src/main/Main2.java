@@ -59,7 +59,6 @@ public class Main2 {
 				System.out.println("学名：" + animals.getScientificName() + "\n");
 
 			} else {
-
 				System.out.println(name + "の情報はありません");
 			}
 		}
