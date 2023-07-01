@@ -38,17 +38,17 @@ public class Main2 {
 
 		// 動物の名前の配列をループして各動物の情報を出力
 		for (String animalName : animalNames) {
+			
+			// 入力文字列をコロンで分割
+			String[] animalInfo = animalName.split(":");
+
+			// 動物の名前を取得
+			String name = animalInfo[0];
 
 			// マップから動物の情報を取得
 			Animals animals = animalMap.get(animalName);
 
 			if (animals != null) {
-
-				// 入力文字列をコロンで分割
-				String[] animalInfo = animalName.split(":");
-
-				// 動物の名前を取得
-				String name = animalInfo[0];
 
 				System.out.println("動物名：" + name);
 
@@ -60,7 +60,7 @@ public class Main2 {
 
 			} else {
 
-				System.out.println("入力された動物名に対応する情報はありません");
+				System.out.println(name + "の情報はありません");
 			}
 		}
 	}
