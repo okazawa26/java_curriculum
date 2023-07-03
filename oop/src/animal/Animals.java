@@ -42,12 +42,14 @@ package animal;
 
 public class Animals {
 
+	// 体長、速度、学名のフィールドを定義
 	private double length;
 
 	private int speed;
 
 	private String scientificName;
 
+	// コンストラクタを定義
 	public Animals(double length, int speed, String scientificName) {
 
 		this.length = length;
@@ -57,6 +59,7 @@ public class Animals {
 		this.scientificName = scientificName;
 	}
 
+	// 体長、速度、学名を取得するためのゲッターを定義
 	public double getLength() {
 		return length;
 	}
