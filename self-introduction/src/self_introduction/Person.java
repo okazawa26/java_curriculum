@@ -1,30 +1,55 @@
 package self_introduction;
 /*
-問題1：インスタンスフィールドを定義してください
+1.31 VehicleとPersonの紐付け
 
-問題2：コンストラクタを定義してください（name,age,height それぞれの引数）
+問題1：Vehicleクラスを作成し、String型のprivateなインスタンスフィールド「owner」を定義
 
-問題3：コンストラクタの中で各インスタンスフィールドに値をセットしてください
+問題2：CarクラスとBicycleクラスを作成
 
-問題4：インスタンスフィールド「weight」を定義し、コンストラクタの中で値をセットしてください（double型）
+問題3：Vehicleクラスにownerフィールドのゲッター「getOwner」とセッター「setOwner」を定義
 
-問題5：Main.javaの引数にweightの60を入れてください
+問題4：MainクラスにsetOwnerを用いて、Carクラスのインスタンス「car」の所有者を「person1」に、
+			Bicycleクラスのインスタンス「bicycle」の所有者を「person2」に設定します。
+			Personクラスのインスタンスからフルネームを取得し、ownerにセットしてください。
 
-問題6：インスタンスメソッド「bmi」を定義してください（戻り値：double）
+問題5：セットできたら、ownerをコンソールに出力してください。
 
-問題7：bmiメソッドでインスタンスのBMIを返すようにしてください
+問題6：Personクラスにインスタンスメソッド「buy」を定義しましょう。（仮引数：car）
 
-問題8：インスタンスメソッド「print」を定義してください（戻り値：void）
+問題7：buyメソッドの中でsetOwnerメソッドとthisを用いてownerフィールドの値をセットしましょう。
 
-問題9：printメソッドの中でthisを用いて「名前は〇〇です」,「年は〇〇です」「BMIは○○です」と出力してください
+問題8：さらに、「〇〇が購入しました」と出力する処理を追加してください。
 
-問題10：人数の合計を「合計○人です」と出力してください。
+問題9：引数の型が異なるbuyメソッドを定義しましょう。（仮引数：bicycle）
+
+問題10：Mainクラスからbuyメソッドを用いて、「person1」がcarを購入、
+			「person2」がbicycleを購入するプログラムを作成しましょう。
+			
+-------------------------------------------------------------------------------------------
+1.32 自己紹介プログラムを作成②
+
+問題1：クラスフィールド「count」を定義してください（初期値：0,データ型：int）
+
+問題2：Personコンストラクタの中でクラスフィールドcountに1を足してください
+
+問題3：Main.javaで System.out.printlnを使い「合計〇〇人です」と出力してください。
+			〇〇はcountの値です。
+
+問題4：クラスメソッド「printCount」を定義してください（データ型：void）
+
+問題5：クラスメソッドの中にクラスフィールド「count」を用いて「合計〇〇人です」と出力してください
+
+問題6：クラスメソッド「printCount」を呼び出してください
  */
 
 public class Person {
-
+	// クラスフィールド
+	public static int count = 0;
+	
 	// インスタンスフィールドを定義
-	public String name;
+	public String firstName;
+
+	public String lastName;
 
 	public int age;
 
@@ -32,13 +57,13 @@ public class Person {
 
 	public double weight;
 
-	// クラスフィールド
-	public static int count = 0;
 
 	// コンストラクタを定義しインスタンスフィールドに値をセット
-	public Person(String name, int age, double height, double weight) {
+	public Person(String firstName, String lastName, int age, double height, double weight) {
 
-		this.name = name;
+		this.firstName = firstName;
+
+		this.lastName = lastName;
 
 		this.age = age;
 
@@ -60,17 +85,39 @@ public class Person {
 	// 名前、歳、BMIを出力するメソッド
 	public void print() {
 
-		System.out.println("\n「名前は" + this.name + "です」");
+		System.out.println("「名前は" + this.fullName() + "です」");
 
 		System.out.println("「年は" + this.age + "才です」");
 
 		// BMIを小数点第一まで出力
-		System.out.println("「BMIは" + String.format("%.1f", this.bmi()) + "です」");
+		System.out.println("「BMIは" + String.format("%.1f", this.bmi()) + "です」\n");
 
 	}
 
 	// 人数(インスタンス数)を出力するメソッド
 	public static void printCount() {
-		System.out.println("「合計" + Person.count + "人です」");
+		System.out.println("「合計" + Person.count + "人です」\n");
+	}
+
+	// フルネームメソッド
+	public String fullName() {
+		String fullName = this.firstName + this.lastName;
+		return fullName;
+	}
+
+	// 車のbuyメソッドを定義
+	public void buy(Car car) {
+
+		car.setOwner(this.fullName());
+
+		System.out.println(car.getOwner() + "が購入しました");
+	}
+
+	// 自転車のbuyメソッドを定義
+	public void buy(Bicycle bicycle) {
+
+		bicycle.setOwner(this.fullName());
+
+		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 }
