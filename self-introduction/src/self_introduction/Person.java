@@ -1,39 +1,12 @@
 package self_introduction;
 /*
-1.31 VehicleとPersonの紐付け
-
-問題1：Vehicleクラスを作成し、String型のprivateなインスタンスフィールド「owner」を定義
-
-問題2：CarクラスとBicycleクラスを作成
-
-問題3：Vehicleクラスにownerフィールドのゲッター「getOwner」とセッター「setOwner」を定義
-
-問題4：MainクラスにsetOwnerを用いて、Carクラスのインスタンス「car」の所有者を「person1」に、
-			Bicycleクラスのインスタンス「bicycle」の所有者を「person2」に設定します。
-			Personクラスのインスタンスからフルネームを取得し、ownerにセットしてください。
-
-問題5：セットできたら、ownerをコンソールに出力してください。
-
-問題6：Personクラスにインスタンスメソッド「buy」を定義しましょう。（仮引数：car）
-
-問題7：buyメソッドの中でsetOwnerメソッドとthisを用いてownerフィールドの値をセットしましょう。
-
-問題8：さらに、「〇〇が購入しました」と出力する処理を追加してください。
-
-問題9：引数の型が異なるbuyメソッドを定義しましょう。（仮引数：bicycle）
-
-問題10：Mainクラスからbuyメソッドを用いて、「person1」がcarを購入、
-			「person2」がbicycleを購入するプログラムを作成しましょう。
-			
--------------------------------------------------------------------------------------------
 1.32 自己紹介プログラムを作成②
 
 問題1：クラスフィールド「count」を定義してください（初期値：0,データ型：int）
 
 問題2：Personコンストラクタの中でクラスフィールドcountに1を足してください
 
-問題3：Main.javaで System.out.printlnを使い「合計〇〇人です」と出力してください。
-			〇〇はcountの値です。
+問題3：Main.javaで System.out.printlnを使い「合計〇〇人です」と出力してください。〇〇はcountの値です。
 
 問題4：クラスメソッド「printCount」を定義してください（データ型：void）
 
@@ -45,7 +18,7 @@ package self_introduction;
 public class Person {
 	// クラスフィールド
 	public static int count = 0;
-	
+
 	// インスタンスフィールドを定義
 	public String firstName;
 

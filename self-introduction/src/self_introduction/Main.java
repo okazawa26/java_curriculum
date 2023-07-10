@@ -16,6 +16,9 @@ public class Main {
 		// 名前、歳、BMIを出力するメソッドの呼び出し
 		person2.print();
 
+		// countの値を出力
+		System.out.println("「合計" + Person.count + "人です」");
+		
 		// 人数(インスタンス数)を出力するメソッドの呼び出し
 		Person.printCount();
 
