@@ -1,18 +1,12 @@
 package self_introduction;
 /*
-1.32 自己紹介プログラムを作成②
+1.33 自己紹介プログラムを作成③
 
-問題1：クラスフィールド「count」を定義してください（初期値：0,データ型：int）
+問題1：インスタンスフィールドに「lastName」を追加しましょう
 
-問題2：Personコンストラクタの中でクラスフィールドcountに1を足してください
+問題2：lastNameの値を引数で受け取るコンストラクタを追加で定義してください ※順番はfirstNameの次
 
-問題3：Main.javaで System.out.printlnを使い「合計〇〇人です」と出力してください。〇〇はcountの値です。
-
-問題4：クラスメソッド「printCount」を定義してください（データ型：void）
-
-問題5：クラスメソッドの中にクラスフィールド「count」を用いて「合計〇〇人です」と出力してください
-
-問題6：クラスメソッド「printCount」を呼び出してください
+問題3：作成したコンストラクタの中に「Person.count++; this.lastName;」を追加しlastNameフィールドの値をセットしてください
  */
 
 public class Person {
@@ -69,28 +63,12 @@ public class Person {
 
 	// 人数(インスタンス数)を出力するメソッド
 	public static void printCount() {
-		System.out.println("「合計" + Person.count + "人です」\n");
+		System.out.println("「合計" + Person.count + "人です」");
 	}
 
 	// フルネームメソッド
 	public String fullName() {
 		String fullName = this.firstName + this.lastName;
 		return fullName;
-	}
-
-	// 車のbuyメソッドを定義
-	public void buy(Car car) {
-
-		car.setOwner(this.fullName());
-
-		System.out.println(car.getOwner() + "が購入しました");
-	}
-
-	// 自転車のbuyメソッドを定義
-	public void buy(Bicycle bicycle) {
-
-		bicycle.setOwner(this.fullName());
-
-		System.out.println(bicycle.getOwner() + "が購入しました");
 	}
 }
